@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار إدارة الأعمال</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1 class="main-title">اختبار إدارة الأعمال</h1>
+<nav>
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="quiz.html">رجوع للتخصصات</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="section-spacing">
+<h2 class="sub-main-title">نموذج اختبار إدارة الأعمال - 10 أسئلة</h2>
+
+<div id="quiz-container" class="content-text">
+
+<p><b>س1:</b> ما هو الهدف الأساسي من التسويق؟</p>
+<input type="radio" name="q1" value="0"> تقليل الأرباح <br>
+<input type="radio" name="q1" value="1"> جذب العملاء وزيادة المبيعات <br>
+<input type="radio" name="q1" value="0"> تقليل الموظفين <br><br>
+
+<p><b>س2:</b> ما معنى الإدارة؟</p>
+<input type="radio" name="q2" value="1"> تنظيم الموارد لتحقيق أهداف <br>
+<input type="radio" name="q2" value="0"> شراء منتجات <br>
+<input type="radio" name="q2" value="0"> إيقاف الأعمال <br><br>
+
+<p><b>س3:</b> أي مما يلي يعتبر من عناصر التخطيط؟</p>
+<input type="radio" name="q3" value="1"> تحديد الأهداف <br>
+<input type="radio" name="q3" value="0"> تجاهل السوق <br>
+<input type="radio" name="q3" value="0"> إلغاء الميزانية <br><br>
+
+<p><b>س4:</b> ما هو SWOT؟</p>
+<input type="radio" name="q4" value="1"> تحليل نقاط القوة والضعف والفرص والتهديدات <br>
+<input type="radio" name="q4" value="0"> نوع من الخوارزميات <br>
+<input type="radio" name="q4" value="0"> قاعدة بيانات <br><br>
+
+<p><b>س5:</b> أي من هذه طرق التمويل؟</p>
+<input type="radio" name="q5" value="1"> قرض بنكي <br>
+<input type="radio" name="q5" value="0"> شراء كمبيوتر <br>
+<input type="radio" name="q5" value="0"> تصميم شعار <br><br>
+
+<p><b>س6:</b> ما هي سلسلة التوريد؟</p>
+<input type="radio" name="q6" value="1"> النظام الذي ينظم تدفق المنتجات والخدمات <br>
+<input type="radio" name="q6" value="0"> نوع من الإعلانات <br>
+<input type="radio" name="q6" value="0"> جهاز كمبيوتر <br><br>
+
+<p><b>س7:</b> أي استراتيجية تساعد على جذب العملاء؟</p>
+<input type="radio" name="q7" value="1"> التسويق الرقمي <br>
+<input type="radio" name="q7" value="0"> إيقاف الإنتاج <br>
+<input type="radio" name="q7" value="0"> حذف العملاء <br><br>
+
+<p><b>س8:</b> ما وظيفة الميزانية؟</p>
+<input type="radio" name="q8" value="1"> تنظيم المصروفات والإيرادات <br>
+<input type="radio" name="q8" value="0"> حذف الحسابات <br>
+<input type="radio" name="q8" value="0"> تصميم الجرافيك <br><br>
+
+<p><b>س9:</b> أي من هذه أنواع الإدارة؟</p>
+<input type="radio" name="q9" value="1"> إدارية، مالية، تسويقية <br>
+<input type="radio" name="q9" value="0"> ترفيهية فقط <br>
+<input type="radio" name="q9" value="0"> رياضية فقط <br><br>
+
+<p><b>س10:</b> ما هي أهمية خدمة العملاء؟</p>
+<input type="radio" name="q10" value="1"> زيادة رضا العملاء والحفاظ عليهم <br>
+<input type="radio" name="q10" value="0"> تجاهل العملاء <br>
+<input type="radio" name="q10" value="0"> خفض الأرباح <br><br>
+
+<button class="quiz-btn" onclick="checkScore()">إظهار النتيجة</button>
+<p id="result"></p>
+
+</div>
+</section>
+</main>
+
+<footer>
+<p>جامعة تبوك - 2026</p>
+</footer>
+
+<script>
+function checkScore() {
+let score=0;
+for(let i=1;i<=10;i++){
+let q=document.querySelector('input[name="q'+i+'"]:checked');
+if(q){ if(q.value=="1"){ score++; } }
+}
+let result=document.getElementById("result");
+if(score==10){ result.innerHTML="نتيجتك: 10/10 - ممتاز جدًا! 🌟"; }
+else if(score>=8){ result.innerHTML="نتيجتك: "+score+"/10 - جيد جدًا! 👍"; }
+else if(score>=5){ result.innerHTML="نتيجتك: "+score+"/10 - جيد! 🙂"; }
+else{ result.innerHTML="نتيجتك: "+score+"/10 - حاول مرة أخرى 😅"; }
+}
+</script>
+</body>
+</html>

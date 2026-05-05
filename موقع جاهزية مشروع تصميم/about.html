@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن الاختبار - منصة جاهزية</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #a5d6a7; /* اللون الأخضر */
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            flex: 1 1 calc(45% - 20px); /* تقريبياً نصف الصفحة لكل مربع */
+            min-width: 250px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #81c784; /* أخضر أغمق عند المرور */
+        }
+
+        .card h3 {
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #2e7d32;
+            font-size: 16px;
+        }
+
+        /* زر العودة للصفحة الرئيسية */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            background-color: #66bb6a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="a.png" alt="University Logo" class="university-logo">
+            <h1 class="main-title">منصة جاهزية - جامعة تبوك</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الاختبار</a></li>
+                <li><a href="instructions.html">دليل الطالب</a></li>
+                <li><a href="quiz.html">اختبار تجريبي</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-spacing">
+            <h2 class="sub-main-title">عن اختبار الجاهزية</h2>
+
+            <a href="index.html" class="back-btn">الرجوع للصفحة الرئيسية</a>
+
+            <div class="cards-container">
+                <div class="card" onclick="window.location.href='intro.html'">
+                    <h3>المقدمة</h3>
+                    <p>نظرة عامة عن اختبار الجاهزية وأهميته.</p>
+                </div>
+
+                <div class="card" onclick="window.location.href='info.html'">
+                    <h3>معلومات عن الاختبار</h3>
+                    <p>تفاصيل حول الهدف والمجالات المستهدفة للاختبار.</p>
+                </div>
+
+
+                <div class="card" onclick="window.location.href='dates.html'">
+                    <h3>مواعيد اختبار جاهزية 2025</h3>
+                    <p>المواعيد المعلنة ومواعيد التسجيل للطلاب.</p>
+                </div>
+
+                <div class="card" onclick="window.location.href='pre-instructions.html'">
+                    <h3> التعليمات قبل تطبيق الاختبار</h3>
+                    <p>نصائح وإرشادات قبل حضور الاختبار.</p>
+                </div>
+
+                <div class="card" onclick="window.location.href='exam-room.html'">
+                    <h3>التعليمات  داخل قاعة الاختبار </h3>
+                    <p>ما يجب اتباعه أثناء وجودك في القاعة.</p>
+                </div>
+
+                <div class="card" onclick="window.location.href='login1.html'">
+                    <h3>طريقة الدخول على منصة الاختبار</h3>
+                    <p>خطوات الدخول على النظام والملاحظات المهمة.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>مقرر CIT 1251 - فريق العمل</p>
+        <p>جامعة تبوك - 2026</p>
+    </footer>
+
+</body>
+</html>
